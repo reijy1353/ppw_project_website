@@ -1,0 +1,9 @@
+# Mac related
+.DS_Store
+
+# Python .venv (for future, if I'm going to add some backend elements)
+.venv
+venv
+
+# Others
+~$rcina_tehnica_BuildMyPC.docx
