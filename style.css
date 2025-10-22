@@ -2,6 +2,8 @@ html, body {
     font-family: "Poppins", sans-serif;
     font-size: 24px;
     font-weight: 300;
+    color: #fff;
+    background-color: #000;
 }
 
 /* Poppins CSS Classes (added just in case) */
@@ -113,3 +115,43 @@ html, body {
     font-style: italic;
   }
   
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 48px;
+}
+
+nav img {
+    height: 32px;
+}
+
+.navbar-links{
+    display: flex;
+    gap: 12px;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+}
+
+.navbar-links a {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal; 
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+.navbar-links button {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal; 
+    font-size: 16px;
+    text-decoration: none;
+    padding: 10px;
+    background-color: #fff;
+    color: #000;
+    border-radius: 7px;
+    border: none;
+}
