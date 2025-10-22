@@ -120,6 +120,14 @@ html, body {
   margin: 20px 0px;
 }
 
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  /* ? Maybe I should add a dynamic background color? sometimes we wouldn't see the fonts, that's it */
+  z-index: 1000;
+}
+
 nav {
   display: flex;
   flex-direction: row;
@@ -133,7 +141,7 @@ nav img {
 
 .navbar-links{
   display: flex;
-  gap: 12px;
+  gap: 24px;
   flex-direction: row;
   justify-content: right;
   align-items: center;
