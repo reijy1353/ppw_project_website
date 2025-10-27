@@ -219,3 +219,9 @@ nav img {
   margin: 0;
   width: 100%;
 }
+
+.pre-build-pcs-container {
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(2, 50%);
+  place-items: center;
+}
