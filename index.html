@@ -1,109 +1,231 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Homepage</title>
-        <link rel="icon" type="image/x-icon" href="/images/favicon_black/android-chrome-512x512.png">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="style.css">
-    </head>
 
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuildMyPC | Custom Builds & Components</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon_black/android-chrome-512x512.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
 
-        <header class="container navbar">
-            <nav>
-                <img src="images/logo/bmpc_logo_no_text.png" alt="logo">
+<body>
 
-                <div class="navbar-links">
-                    <a href="#">Home</a>
-                    <!-- It'll have CPU, GPU etc. -->
-                    <a href="#">Components</a>
-                    <a href="#">About us</a>
-                    <a href="#">Contact us</a>
-                    <a href="#">Admin dashboard</a>
-                    <a href="#">Shopping cart</a>
-                    <button href="https://www.example.com" target="_blank">Sign up</button>
+    <header class="navbar">
+        <nav class="container-navbar">
+            <a class="logo-link" href="#">
+                <img src="images/logo/bmpc_logo_no_text.png" alt="BuildMyPC logo">
+                <span>BuildMyPC</span>
+            </a>
+            <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation">
+                <span class="sr-only">Toggle navigation</span>
+            </button>
+            <div class="navbar-links" id="primary-navigation">
+                <a href="#">Home</a>
+                <a href="#components">Components</a>
+                <a href="#prebuilt">Pre-built PCs</a>
+                <a href="#reviews">Reviews</a>
+                <a href="#contact">Contact</a>
+                <a href="#cart">Cart</a>
+                <button class="btn btn-primary btn-navbar" href="#signup">Sign up</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero container">
+            <div class="hero-media">
+                <video src="images/homepage/homepage_main_section.mp4" autoplay loop muted playsinline></video>
+                <div class="hero-overlay gradient-overlay"></div>
+            </div>
+            <div class="hero-content">
+                <p class="eyebrow">Powerful rigs. Zero guesswork.</p>
+                <h1>Build the PC you wish you owned.</h1>
+                <p class="subtitle">
+                    Curated components, battle-tested pre-builds, and expert guidance
+                    so every frame, render, and idea runs flawlessly.
+                </p>
+                <div class="hero-cta">
+                    <a class="btn btn-primary" href="#builder">Start building</a>
+                    <a class="btn btn-secondary" href="#prebuilt">Browse pre-builds</a>
                 </div>
-            </nav>
-        </header>
+            </div>
+        </section>
 
-        <main>
-            <!-- TODO Creating/Making the first section -->
-            <section class="container">
-                <div class="introduction-section homepage-video-container">
-                    <video src="images/homepage/homepage_main_section.mp4" autoplay loop muted></video>
-                    <div class="introduction-text-container poppins-regular-italic">
-                        <div class="logo-motto-container centered">
-                            <p id="homepage-main-logo">LOGO</p>
-                            <p style="margin: 0;">Build your dreams</p>
-                        </div>
-                        <div class="underlogo-motivation-container lower-centered">
-                            <p>Instead of dreaming about the things you want</p>
-                            <p>Build the thing you want</p>
-                        </div>
+        <section class="container prebuilt-section" id="prebuilt">
+            <div class="section-heading">
+                <p class="eyebrow">Featured line-up</p>
+                <h2>Pre-built PCs tuned for every use case</h2>
+                <p>Select a build to inspect specs, benchmarks, and upgrade paths.</p>
+            </div>
+            <div class="prebuilt-grid">
+                <article class="prebuilt-card">
+                    <header>
+                        <p class="badge badge-success">Ready to ship</p>
+                        <h3>Nebula Pro</h3>
+                        <p class="tagline">4K esports & streaming</p>
+                    </header>
+                    <ul>
+                        <li>Ryzen 7 7800X3D • RTX 4080 Super</li>
+                        <li>32 GB DDR5 • 2 TB Gen4 NVMe</li>
+                        <li>Custom loop cooling • Wi-Fi 7</li>
+                    </ul>
+                    <div class="card-footer">
+                        <p class="price">From $2,799</p>
+                        <a class="btn btn-ghost" href="#">View build</a>
                     </div>
+                </article>
+                <article class="prebuilt-card">
+                    <header>
+                        <p class="badge badge-info">Bestseller</p>
+                        <h3>Creator Studio</h3>
+                        <p class="tagline">4K editing & 3D rendering</p>
+                    </header>
+                    <ul>
+                        <li>Intel i9-14900K • RTX 4090</li>
+                        <li>64 GB DDR5 • 4 TB NVMe RAID</li>
+                        <li>Silent airflow chassis</li>
+                    </ul>
+                    <div class="card-footer">
+                        <p class="price">From $3,999</p>
+                        <a class="btn btn-ghost" href="#">View build</a>
+                    </div>
+                </article>
+                <article class="prebuilt-card">
+                    <header>
+                        <p class="badge badge-warning">New</p>
+                        <h3>Pocket Forge</h3>
+                        <p class="tagline">ITX performance in 12L</p>
+                    </header>
+                    <ul>
+                        <li>Ryzen 7 7700 • RTX 4070 Super</li>
+                        <li>32 GB DDR5 • 1 TB NVMe</li>
+                        <li>Travel-ready crush case</li>
+                    </ul>
+                    <div class="card-footer">
+                        <p class="price">From $1,899</p>
+                        <a class="btn btn-ghost" href="#">View build</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="container components-section" id="components">
+            <div class="section-heading">
+                <p class="eyebrow">Curated component shop</p>
+                <h2>Only the parts we trust in our own rigs</h2>
+            </div>
+            <div class="component-grid">
+                <article>
+                    <h3>Processors & Cooling</h3>
+                    <p>Unlocked CPUs, AIOs, and custom loop hardware with thermal reports.</p>
+                    <a href="#" class="text-link">Explore CPUs</a>
+                </article>
+                <article>
+                    <h3>Graphics</h3>
+                    <p>Latest NVIDIA and AMD cards with tested FPS metrics.</p>
+                    <a href="#" class="text-link">Find a GPU</a>
+                </article>
+                <article>
+                    <h3>Storage</h3>
+                    <p>Blazing NVMe drives, RAID-ready SSDs, and curated NAS options.</p>
+                    <a href="#" class="text-link">Upgrade storage</a>
+                </article>
+                <article>
+                    <h3>Peripherals</h3>
+                    <p>Monitors, keyboards, and audio tuned for creation and play.</p>
+                    <a href="#" class="text-link">View accessories</a>
+                </article>
+            </div>
+        </section>
+
+        <section class="container builder-steps" id="builder">
+            <div class="section-heading">
+                <p class="eyebrow">How it works</p>
+                <h2>From idea to powered-on in four steps</h2>
+            </div>
+            <ol class="steps">
+                <li>
+                    <h3>Tell us your goals</h3>
+                    <p>Gaming, creative work, AI workflows—set your targets and budget.</p>
+                </li>
+                <li>
+                    <h3>Pick curated parts</h3>
+                    <p>We suggest compatible components or pre-tuned templates.</p>
+                </li>
+                <li>
+                    <h3>We build & stress test</h3>
+                    <p>Every rig runs 24h thermal, memory, and graphics diagnostics.</p>
+                </li>
+                <li>
+                    <h3>Enjoy white-glove handoff</h3>
+                    <p>Get cable maps, BIOS profiles, and lifetime support.</p>
+                </li>
+            </ol>
+        </section>
+
+        <section class="container reviews-section" id="reviews">
+            <div class="section-heading">
+                <p class="eyebrow">Voices from the community</p>
+                <h2>Real builders. Real wins.</h2>
+            </div>
+            <div class="reviews-grid">
+                <article>
+                    <p class="quote">
+                        “My Nebula Pro hits 360 FPS in Valorant while streaming. Temps stay under 60°C.”
+                    </p>
+                    <p class="reviewer">Alex • Esports coach</p>
+                </article>
+                <article>
+                    <p class="quote">
+                        “Their team dialed in a render workstation that chews through octane scenes.”
+                    </p>
+                    <p class="reviewer">Marina • 3D artist</p>
+                </article>
+                <article>
+                    <p class="quote">
+                        “The build guide and cable labels made future upgrades painless.”
+                    </p>
+                    <p class="reviewer">Devon • Indie dev</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="container cta-section" id="signup">
+            <div class="cta-card">
+                <div>
+                    <p class="eyebrow">Need a co-builder?</p>
+                    <h2>Let’s architect your next PC together.</h2>
+                    <p>Book a free 15-minute consult with our build engineers.</p>
                 </div>
-            </section>
+                <a class="btn btn-primary" href="mailto:hello@buildmypc.com">Book a call</a>
+            </div>
+        </section>
+    </main>
 
-            <section class="container">
-                <div class="pre-build-pcs-container">
-                    <div class="pre-build-pc">
-                        <div>
-                            <h1>Play</h1>
-                            <p>somethign</p>
-                        </div>
-                        <button>about</button>
-                        <img src="" alt="">
-                    </div>
-                    <div class="pre-build-pc">
-                        <div>
-                            <h1>Play</h1>
-                            <p>somethign</p>
-                        </div>
-                        <button>about</button>
-                        <img src="" alt="">
-                    </div> 
-                    <div class="pre-build-pc">
-                        <div>
-                            <h1>Play</h1>
-                            <p>somethign</p>
-                        </div>
-                        <button>about</button>
-                        <img src="" alt="">
-                    </div>
-                    <div class="pre-build-pc">
-                        <div>
-                            <h1>Play</h1>
-                            <p>somethign</p>
-                        </div>
-                        <button>about</button>
-                        <img src="" alt="">
-                    </div>
-                    <div class="pre-build-pc">
-                        <div>
-                            <h1>Play</h1>
-                            <p>somethign</p>
-                        </div>
-                        <button>about</button>
-                        <img src="" alt="">
-                    </div>
-                    <div class="pre-build-pc">
-                        <div>
-                            <h1>Play</h1>
-                            <p>somethign</p>
-                        </div>
-                        <button>about</button>
-                        <img src="" alt="">
-                    </div>
-                </div>
-            </section>
+    <footer class="site-footer" id="contact">
+        <div class="container footer-content">
+            <div>
+                <p class="eyebrow">BuildMyPC</p>
+                <p>Custom PCs crafted in Bucharest. Shipping EU-wide.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#">Support</a>
+                <a href="#">Warranty</a>
+                <a href="#">Privacy</a>
+            </div>
+            <p class="small-print">© <span id="year"></span> BuildMyPC. All rights reserved.</p>
+        </div>
+    </footer>
 
-            <section>review section/presensting ppl reviews in real time</section>
-            <section>I'll think about other section tho</section>
-        </main>
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
 
-        <footer>all the links you need to fully dive into the site</footer>
-
-    </body>
 </html>
