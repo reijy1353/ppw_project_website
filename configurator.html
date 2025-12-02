@@ -1,8 +1,173 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuildMyPC | PC Configurator</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon_black/android-chrome-512x512.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<header class="navbar">
+    <nav class="container-navbar">
+        <a class="logo-link" href="index.html">
+            <img src="images/logo/bmpc_logo_no_text.png" alt="BuildMyPC logo">
+            <span>BuildMyPC</span>
+        </a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation">
+            <span class="sr-only">Toggle navigation</span>
+        </button>
+        <div class="navbar-links" id="primary-navigation">
+            <a href="index.html">Home</a>
+            <a href="components.html">Components</a>
+            <a href="prebuilt.html">Pre-built PCs</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="cart.html">Cart</a>
+            <a class="btn btn-primary btn-navbar" href="signup.html">Sign up</a>
+        </div>
+    </nav>
+</header>
+
+<main class="container configurator-page">
+    <section class="section-heading">
+        <p class="eyebrow">PC Configurator</p>
+        <h1>Design your perfect build</h1>
+        <p>Choose your use case, budget, and parts. Later we can add smart compatibility checks and live pricing.</p>
+    </section>
+
+    <section class="configurator-layout">
+        <form class="configurator-form" action="#" method="get">
+            <fieldset>
+                <legend>1. Build profile</legend>
+                <label>
+                    Primary use case
+                    <select name="use-case">
+                        <option value="gaming">Gaming</option>
+                        <option value="creator">Content creation</option>
+                        <option value="office">Office / everyday</option>
+                        <option value="ai">AI / machine learning</option>
+                    </select>
+                </label>
+                <label>
+                    Target resolution
+                    <select name="resolution">
+                        <option value="1080p">1080p</option>
+                        <option value="1440p">1440p</option>
+                        <option value="4k">4K</option>
+                    </select>
+                </label>
+                <label>
+                    Budget (EUR)
+                    <input type="number" name="budget" placeholder="1500">
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>2. Core components</legend>
+                <label>
+                    CPU
+                    <select name="cpu">
+                        <option>Ryzen 5 7600</option>
+                        <option>Ryzen 7 7800X3D</option>
+                        <option>Intel Core i5-14600K</option>
+                        <option>Intel Core i7-14700K</option>
+                    </select>
+                </label>
+                <label>
+                    GPU
+                    <select name="gpu">
+                        <option>RTX 4060 Ti</option>
+                        <option>RTX 4070 Super</option>
+                        <option>RTX 4080 Super</option>
+                        <option>RTX 4090</option>
+                    </select>
+                </label>
+                <label>
+                    Motherboard
+                    <select name="motherboard">
+                        <option>B650 ATX</option>
+                        <option>X670E ATX</option>
+                        <option>Z790 ATX</option>
+                        <option>B760 mATX</option>
+                    </select>
+                </label>
+                <label>
+                    RAM
+                    <select name="ram">
+                        <option>16 GB DDR5</option>
+                        <option>32 GB DDR5</option>
+                        <option>64 GB DDR5</option>
+                    </select>
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>3. Storage & power</legend>
+                <label>
+                    Storage
+                    <select name="storage">
+                        <option>1 TB NVMe SSD</option>
+                        <option>2 TB NVMe SSD</option>
+                        <option>1 TB NVMe + 2 TB HDD</option>
+                    </select>
+                </label>
+                <label>
+                    Power supply
+                    <select name="psu">
+                        <option>650W Gold</option>
+                        <option>750W Gold</option>
+                        <option>850W Gold</option>
+                    </select>
+                </label>
+                <label>
+                    Case
+                    <select name="case">
+                        <option>Mid-tower airflow</option>
+                        <option>Silent mid-tower</option>
+                        <option>ITX small form factor</option>
+                    </select>
+                </label>
+            </fieldset>
+
+            <button type="submit" class="btn btn-primary">Preview build</button>
+        </form>
+
+        <aside class="configurator-summary">
+            <h2>Build summary</h2>
+            <p>This panel can later show estimated FPS, wattage, and upgrade suggestions.</p>
+            <ul>
+                <li>Selected profile and resolution</li>
+                <li>Parts list with short notes</li>
+                <li>Estimated total price</li>
+            </ul>
+            <p>For now this is static placeholder content, ready for JavaScript logic later.</p>
+        </aside>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-content">
+        <div>
+            <p class="eyebrow">BuildMyPC</p>
+            <p>Custom PCs crafted for Gods, kidding just for humans, but humans with a kind heart.</p>
+        </div>
+        <div class="footer-links">
+            <a href="#">Support</a>
+            <a href="#">Warranty</a>
+            <a href="#">Privacy</a>
+        </div>
+        <p class="small-print">© <span id="year"></span> BuildMyPC. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
-
