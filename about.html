@@ -1,8 +1,85 @@
 <!DOCTYPE html>
 <html>
-<head>
-</head>
-<body>
-</body>
-</html>
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuildMyPC | About Us</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon_black/android-chrome-512x512.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <nav class="container-navbar">
+            <a class="logo-link" href="index.html">
+                <img src="images/logo/bmpc_logo_no_text.png" alt="BuildMyPC logo">
+                <span>BuildMyPC</span>
+            </a>
+            <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation">
+                <span class="sr-only">Toggle navigation</span>
+            </button>
+            <div class="navbar-links" id="primary-navigation">
+                <a href="index.html">Home</a>
+                <a href="components.html">Components</a>
+                <a href="prebuilt.html">Pre-built PCs</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="cart.html">Cart</a>
+                <a class="btn btn-primary btn-navbar" href="signup.html">Sign up</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container about-page">
+        <section class="section-heading">
+            <p class="eyebrow">About BuildMyPC</p>
+            <h1>Custom PCs without the guesswork</h1>
+            <p>We build PCs for Gods, just kidding, we build them for mere humans,
+                but not simple humans, the ones that have the kindest of hearts...
+            </p>
+        </section>
+
+        <section class="about-story">
+            <h2>The story</h2>
+            <p>BuildMyPC started as a passion project between friends who built systems for classmates and local
+                creators.
+                We turned countless late-night troubleshooting sessions into a simple promise: clear advice, compatible
+                parts, and builds that stay quiet and cool.</p>
+            <p>Did you believe all of this XD? Because I didn't, and I'll recommend you to not too. In reality it's the
+                project for one of my classes (I really enjoy the class, actually... strange isn't it?)
+            </p>
+        </section>
+
+        <section class="about-team">
+            <h2>The team</h2>
+            <p>We're a team of builders, gamers and passioned people... Damn who do I lie to? Just me, solely me :(</p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div>
+                <p class="eyebrow">BuildMyPC</p>
+                <p>Custom PCs crafted for Gods, kidding just for humans, but humans with a kind heart.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#">Support</a>
+                <a href="#">Warranty</a>
+                <a href="#">Privacy</a>
+            </div>
+            <p class="small-print">© <span id="year"></span> BuildMyPC. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
