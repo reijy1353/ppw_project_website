@@ -1,8 +1,120 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuildMyPC | Pre-built PCs</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon_black/android-chrome-512x512.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<header class="navbar">
+    <nav class="container-navbar">
+        <a class="logo-link" href="index.html">
+            <img src="images/logo/bmpc_logo_no_text.png" alt="BuildMyPC logo">
+            <span>BuildMyPC</span>
+        </a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation">
+            <span class="sr-only">Toggle navigation</span>
+        </button>
+        <div class="navbar-links" id="primary-navigation">
+            <a href="index.html">Home</a>
+            <a href="components.html">Components</a>
+            <a href="prebuilt.html">Pre-built PCs</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="cart.html">Cart</a>
+            <a class="btn btn-primary btn-navbar" href="signup.html">Sign up</a>
+        </div>
+    </nav>
+</header>
+
+<main class="container prebuilt-page">
+    <section class="section-heading">
+        <p class="eyebrow">Pre-built line-up</p>
+        <h1>PCs tuned for different workloads</h1>
+        <p>Pick a ready-made configuration, then adjust storage, RAM, or aesthetics later if needed.</p>
+    </section>
+
+    <section class="prebuilt-grid">
+        <article class="prebuilt-card">
+            <header>
+                <p class="badge badge-success">Ready to ship</p>
+                <h2>Nebula Pro</h2>
+                <p class="tagline">4K esports & streaming</p>
+            </header>
+            <ul>
+                <li>Ryzen 7 7800X3D • RTX 4080 Super</li>
+                <li>32 GB DDR5 • 2 TB Gen4 NVMe</li>
+                <li>Custom loop cooling • Wi-Fi 7</li>
+            </ul>
+            <div class="card-footer">
+                <p class="price">From €2,799</p>
+                <a class="btn btn-ghost" href="#">View details</a>
+                <a class="btn btn-primary" href="cart.html">Add to cart</a>
+            </div>
+        </article>
+
+        <article class="prebuilt-card">
+            <header>
+                <p class="badge badge-info">Bestseller</p>
+                <h2>Creator Studio</h2>
+                <p class="tagline">4K editing & 3D rendering</p>
+            </header>
+            <ul>
+                <li>Intel i9-14900K • RTX 4090</li>
+                <li>64 GB DDR5 • 4 TB NVMe RAID</li>
+                <li>Silent airflow chassis</li>
+            </ul>
+            <div class="card-footer">
+                <p class="price">From €3,999</p>
+                <a class="btn btn-ghost" href="#">View details</a>
+                <a class="btn btn-primary" href="cart.html">Add to cart</a>
+            </div>
+        </article>
+
+        <article class="prebuilt-card">
+            <header>
+                <p class="badge badge-warning">New</p>
+                <h2>Pocket Forge</h2>
+                <p class="tagline">ITX performance in 12L</p>
+            </header>
+            <ul>
+                <li>Ryzen 7 7700 • RTX 4070 Super</li>
+                <li>32 GB DDR5 • 1 TB NVMe</li>
+                <li>Travel-ready compact case</li>
+            </ul>
+            <div class="card-footer">
+                <p class="price">From €1,899</p>
+                <a class="btn btn-ghost" href="#">View details</a>
+                <a class="btn btn-primary" href="cart.html">Add to cart</a>
+            </div>
+        </article>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-content">
+        <div>
+            <p class="eyebrow">BuildMyPC</p>
+            <p>Custom PCs crafted for Gods, kidding just for humans, but humans with a kind heart.</p>
+        </div>
+        <div class="footer-links">
+            <a href="#">Support</a>
+            <a href="#">Warranty</a>
+            <a href="#">Privacy</a>
+        </div>
+        <p class="small-print">© <span id="year"></span> BuildMyPC. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
-
