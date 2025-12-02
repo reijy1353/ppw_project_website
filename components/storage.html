@@ -1,8 +1,103 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuildMyPC | Storage</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon_black/android-chrome-512x512.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
+<header class="navbar">
+    <nav class="container-navbar">
+        <a class="logo-link" href="../index.html">
+            <img src="../images/logo/bmpc_logo_no_text.png" alt="BuildMyPC logo">
+            <span>BuildMyPC</span>
+        </a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation">
+            <span class="sr-only">Toggle navigation</span>
+        </button>
+        <div class="navbar-links" id="primary-navigation">
+            <a href="../index.html">Home</a>
+            <a href="../components.html">Components</a>
+            <a href="../prebuilt.html">Pre-built PCs</a>
+            <a href="../about.html">About</a>
+            <a href="../contact.html">Contact</a>
+            <a href="../cart.html">Cart</a>
+            <a class="btn btn-primary btn-navbar" href="../signup.html">Sign up</a>
+        </div>
+    </nav>
+</header>
+
+<main class="container components-page">
+    <section class="section-heading">
+        <p class="eyebrow">Components</p>
+        <h1>Storage (SSD / HDD)</h1>
+        <p>Separate fast boot drives from large game and project libraries.</p>
+    </section>
+
+    <section class="components-table">
+        <table>
+            <thead>
+                <tr>
+                    <th>Drive</th>
+                    <th>Type</th>
+                    <th>Capacity</th>
+                    <th>Recommended use</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1 TB NVMe Gen4</td>
+                    <td>SSD</td>
+                    <td>1 TB</td>
+                    <td>Boot drive for OS and main apps.</td>
+                </tr>
+                <tr>
+                    <td>2 TB NVMe Gen4</td>
+                    <td>SSD</td>
+                    <td>2 TB</td>
+                    <td>Games and active project files.</td>
+                </tr>
+                <tr>
+                    <td>2 TB SATA SSD</td>
+                    <td>SSD</td>
+                    <td>2 TB</td>
+                    <td>Quieter storage for media libraries.</td>
+                </tr>
+                <tr>
+                    <td>4 TB HDD 7200 RPM</td>
+                    <td>HDD</td>
+                    <td>4 TB</td>
+                    <td>Backups and archive footage.</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-content">
+        <div>
+            <p class="eyebrow">BuildMyPC</p>
+            <p>Custom PCs crafted for Gods, kidding just for humans, but humans with a kind heart.</p>
+        </div>
+        <div class="footer-links">
+            <a href="#">Support</a>
+            <a href="#">Warranty</a>
+            <a href="#">Privacy</a>
+        </div>
+        <p class="small-print">© <span id="year"></span> BuildMyPC. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
-

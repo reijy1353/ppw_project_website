@@ -1,8 +1,103 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuildMyPC | Processors</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon_black/android-chrome-512x512.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
+<header class="navbar">
+    <nav class="container-navbar">
+        <a class="logo-link" href="../index.html">
+            <img src="../images/logo/bmpc_logo_no_text.png" alt="BuildMyPC logo">
+            <span>BuildMyPC</span>
+        </a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation">
+            <span class="sr-only">Toggle navigation</span>
+        </button>
+        <div class="navbar-links" id="primary-navigation">
+            <a href="../index.html">Home</a>
+            <a href="../components.html">Components</a>
+            <a href="../prebuilt.html">Pre-built PCs</a>
+            <a href="../about.html">About</a>
+            <a href="../contact.html">Contact</a>
+            <a href="../cart.html">Cart</a>
+            <a class="btn btn-primary btn-navbar" href="../signup.html">Sign up</a>
+        </div>
+    </nav>
+</header>
+
+<main class="container components-page">
+    <section class="section-heading">
+        <p class="eyebrow">Components</p>
+        <h1>Processors (CPU)</h1>
+        <p>Choose a processor that matches your games, apps, and resolution targets.</p>
+    </section>
+
+    <section class="components-table">
+        <table>
+            <thead>
+                <tr>
+                    <th>Model</th>
+                    <th>Cores / Threads</th>
+                    <th>Use case</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Ryzen 5 7600</td>
+                    <td>6 / 12</td>
+                    <td>1080p gaming, everyday use</td>
+                    <td>Great value starter chip for budget builds.</td>
+                </tr>
+                <tr>
+                    <td>Ryzen 7 7800X3D</td>
+                    <td>8 / 16</td>
+                    <td>High FPS gaming</td>
+                    <td>Excellent 1440p and 4K gaming performance.</td>
+                </tr>
+                <tr>
+                    <td>Intel Core i5-14600K</td>
+                    <td>14 cores</td>
+                    <td>Mixed gaming & productivity</td>
+                    <td>Balanced choice for streaming and multitasking.</td>
+                </tr>
+                <tr>
+                    <td>Intel Core i9-14900K</td>
+                    <td>24 cores</td>
+                    <td>Rendering and heavy workloads</td>
+                    <td>Best used with strong cooling and a quality PSU.</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-content">
+        <div>
+            <p class="eyebrow">BuildMyPC</p>
+            <p>Custom PCs crafted for Gods, kidding just for humans, but humans with a kind heart.</p>
+        </div>
+        <div class="footer-links">
+            <a href="#">Support</a>
+            <a href="#">Warranty</a>
+            <a href="#">Privacy</a>
+        </div>
+        <p class="small-print">© <span id="year"></span> BuildMyPC. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
-
