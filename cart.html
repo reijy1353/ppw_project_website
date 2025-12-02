@@ -1,8 +1,106 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuildMyPC | Cart</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon_black/android-chrome-512x512.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<header class="navbar">
+    <nav class="container-navbar">
+        <a class="logo-link" href="index.html">
+            <img src="images/logo/bmpc_logo_no_text.png" alt="BuildMyPC logo">
+            <span>BuildMyPC</span>
+        </a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation">
+            <span class="sr-only">Toggle navigation</span>
+        </button>
+        <div class="navbar-links" id="primary-navigation">
+            <a href="index.html">Home</a>
+            <a href="components.html">Components</a>
+            <a href="prebuilt.html">Pre-built PCs</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="cart.html">Cart</a>
+            <a class="btn btn-primary btn-navbar" href="signup.html">Sign up</a>
+        </div>
+    </nav>
+</header>
+
+<main class="container cart-page">
+    <section class="section-heading">
+        <p class="eyebrow">Cart</p>
+        <h1>Your current selection</h1>
+        <p>In a real shop this page would show live prices and quantities. For now it is a static layout.</p>
+    </section>
+
+    <section class="cart-layout">
+        <table class="cart-table">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Type</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Subtotal</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Nebula Pro pre-built</td>
+                    <td>Pre-built PC</td>
+                    <td>€2,799</td>
+                    <td>1</td>
+                    <td>€2,799</td>
+                </tr>
+                <tr>
+                    <td>Extra 2 TB NVMe SSD</td>
+                    <td>Storage</td>
+                    <td>€199</td>
+                    <td>1</td>
+                    <td>€199</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="4">Estimated total</td>
+                    <td>€2,998</td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <aside class="cart-summary">
+            <h2>Checkout summary</h2>
+            <p>This section could later show taxes, shipping, and payment options.</p>
+            <button class="btn btn-primary" type="button">Proceed to checkout</button>
+        </aside>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-content">
+        <div>
+            <p class="eyebrow">BuildMyPC</p>
+            <p>Custom PCs crafted for Gods, kidding just for humans, but humans with a kind heart.</p>
+        </div>
+        <div class="footer-links">
+            <a href="#">Support</a>
+            <a href="#">Warranty</a>
+            <a href="#">Privacy</a>
+        </div>
+        <p class="small-print">© <span id="year"></span> BuildMyPC. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
-
