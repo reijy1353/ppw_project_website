@@ -338,7 +338,7 @@ h3 {
   counter-reset: step;
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 15px;
 }
 
 .steps li {
