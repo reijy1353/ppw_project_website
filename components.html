@@ -1,8 +1,102 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuildMyPC | Components</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon_black/android-chrome-512x512.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<header class="navbar">
+    <nav class="container-navbar">
+        <a class="logo-link" href="index.html">
+            <img src="images/logo/bmpc_logo_no_text.png" alt="BuildMyPC logo">
+            <span>BuildMyPC</span>
+        </a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation">
+            <span class="sr-only">Toggle navigation</span>
+        </button>
+        <div class="navbar-links" id="primary-navigation">
+            <a href="index.html">Home</a>
+            <a href="components.html">Components</a>
+            <a href="prebuilt.html">Pre-built PCs</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="cart.html">Cart</a>
+            <a class="btn btn-primary btn-navbar" href="signup.html">Sign up</a>
+        </div>
+    </nav>
+</header>
+
+<main class="container components-page">
+    <section class="section-heading">
+        <p class="eyebrow">Component catalog</p>
+        <h1>All the parts you need for your build</h1>
+        <p>Browse by category to find tested CPUs, GPUs, motherboards, memory, storage, power supplies, and cases.</p>
+    </section>
+
+    <section class="component-grid">
+        <article>
+            <h2>Processors (CPU)</h2>
+            <p>From budget quad-cores to high-end gaming and creator chips, all validated in real builds.</p>
+            <a href="components/cpu.html" class="text-link">View processors</a>
+        </article>
+        <article>
+            <h2>Motherboards</h2>
+            <p>ATX, mATX, and ITX boards with clear support for current CPUs and RAM speeds.</p>
+            <a href="components/motherboards.html" class="text-link">View motherboards</a>
+        </article>
+        <article>
+            <h2>Graphics cards (GPU)</h2>
+            <p>Esports, 4K, and creator GPUs with FPS numbers and recommended pairings.</p>
+            <a href="components/gpu.html" class="text-link">View graphics cards</a>
+        </article>
+        <article>
+            <h2>Memory (RAM)</h2>
+            <p>Fast DDR4 and DDR5 kits with tested timings and stability profiles.</p>
+            <a href="components/ram.html" class="text-link">View RAM</a>
+        </article>
+        <article>
+            <h2>Storage (SSD / HDD)</h2>
+            <p>Boot drives, game libraries, and archive storage with real-world transfer tests.</p>
+            <a href="components/storage.html" class="text-link">View storage</a>
+        </article>
+        <article>
+            <h2>Power supplies (PSU)</h2>
+            <p>Reliable Bronze, Gold, and Platinum units sized for your GPU and upgrade plans.</p>
+            <a href="components/psu.html" class="text-link">View PSUs</a>
+        </article>
+        <article>
+            <h2>Cases</h2>
+            <p>Airflow and silence-focused cases in multiple sizes, with clear GPU and cooler clearance.</p>
+            <a href="components/case.html" class="text-link">View cases</a>
+        </article>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-content">
+        <div>
+            <p class="eyebrow">BuildMyPC</p>
+            <p>Custom PCs crafted for Gods, kidding just for humans, but humans with a kind heart.</p>
+        </div>
+        <div class="footer-links">
+            <a href="#">Support</a>
+            <a href="#">Warranty</a>
+            <a href="#">Privacy</a>
+        </div>
+        <p class="small-print">© <span id="year"></span> BuildMyPC. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
-
