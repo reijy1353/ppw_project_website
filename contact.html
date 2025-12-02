@@ -1,8 +1,92 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuildMyPC | Contact</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon_black/android-chrome-512x512.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<header class="navbar">
+    <nav class="container-navbar">
+        <a class="logo-link" href="index.html">
+            <img src="images/logo/bmpc_logo_no_text.png" alt="BuildMyPC logo">
+            <span>BuildMyPC</span>
+        </a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation">
+            <span class="sr-only">Toggle navigation</span>
+        </button>
+        <div class="navbar-links" id="primary-navigation">
+            <a href="index.html">Home</a>
+            <a href="components.html">Components</a>
+            <a href="prebuilt.html">Pre-built PCs</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="cart.html">Cart</a>
+            <a class="btn btn-primary btn-navbar" href="signup.html">Sign up</a>
+        </div>
+    </nav>
+</header>
+
+<main class="container contact-page">
+    <section class="section-heading">
+        <p class="eyebrow">Contact</p>
+        <h1>Let's talk about your next PC</h1>
+        <p>Send us a message about your build idea, a pre-built configuration, or general questions.</p>
+    </section>
+
+    <section class="contact-layout">
+        <form class="contact-form" action="#" method="post">
+            <label>
+                Name
+                <input type="text" name="name" required>
+            </label>
+            <label>
+                Email
+                <input type="email" name="email" required>
+            </label>
+            <label>
+                Subject
+                <input type="text" name="subject" placeholder="New gaming PC, upgrade, support...">
+            </label>
+            <label>
+                Message
+                <textarea name="message" rows="5" placeholder="Tell us what you want to build or fix."></textarea>
+            </label>
+            <button type="submit" class="btn btn-primary">Send message</button>
+        </form>
+
+        <aside class="contact-details">
+            <h2>Other ways to reach us</h2>
+            <p>Email: <a href="mailto:hello@buildmypc.com">hello@buildmypc.com</a></p>
+            <p>Default reply time: under 24 hours on business days.</p>
+        </aside>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-content">
+        <div>
+            <p class="eyebrow">BuildMyPC</p>
+            <p>Custom PCs crafted for Gods, kidding just for humans, but humans with a kind heart.</p>
+        </div>
+        <div class="footer-links">
+            <a href="#">Support</a>
+            <a href="#">Warranty</a>
+            <a href="#">Privacy</a>
+        </div>
+        <p class="small-print">© <span id="year"></span> BuildMyPC. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
-
