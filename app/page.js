@@ -1,65 +1,183 @@
-import Image from "next/image";
+import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.js file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <>
+      <section className="hero container">
+        <div className="hero-media">
+          <video 
+            src="/images/homepage/homepage_main_section.mp4" 
+            autoPlay 
+            loop 
+            muted 
+            playsInline
+          ></video>
+          <div className="hero-overlay gradient-overlay"></div>
+        </div>
+        <div className="hero-content">
+          <p className="eyebrow">Powerful rigs. Zero guesswork.</p>
+          <h1>Build the PC you wish you owned.</h1>
+          <p className="subtitle">
+            Curated components, battle-tested pre-builds, and expert guidance
+            so every frame, render, and idea runs flawlessly.
           </p>
+          <div className="hero-cta">
+            <Link className="btn btn-primary" href="/configurator">Start building</Link>
+            <Link className="btn btn-secondary" href="/prebuilt">Browse pre-builds</Link>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      <section className="container prebuilt-section" id="prebuilt">
+        <div className="section-heading">
+          <p className="eyebrow">Featured line-up</p>
+          <h2>Pre-built PCs tuned for every use case</h2>
+          <p>Select a build to inspect specs, benchmarks, and upgrade paths.</p>
         </div>
-      </main>
-    </div>
+        <div className="prebuilt-grid">
+          <article className="prebuilt-card">
+            <header>
+              <p className="badge badge-success">Ready to ship</p>
+              <h3>Nebula Pro</h3>
+              <p className="tagline">4K esports & streaming</p>
+            </header>
+            <ul>
+              <li>Ryzen 7 7800X3D • RTX 4080 Super</li>
+              <li>32 GB DDR5 • 2 TB Gen4 NVMe</li>
+              <li>Custom loop cooling • Wi-Fi 7</li>
+            </ul>
+            <div className="card-footer">
+              <p className="price">From $2,799</p>
+              <Link className="btn btn-ghost" href="#">View build</Link>
+            </div>
+          </article>
+          <article className="prebuilt-card">
+            <header>
+              <p className="badge badge-info">Bestseller</p>
+              <h3>Creator Studio</h3>
+              <p className="tagline">4K editing & 3D rendering</p>
+            </header>
+            <ul>
+              <li>Intel i9-14900K • RTX 4090</li>
+              <li>64 GB DDR5 • 4 TB NVMe RAID</li>
+              <li>Silent airflow chassis</li>
+            </ul>
+            <div className="card-footer">
+              <p className="price">From $3,999</p>
+              <Link className="btn btn-ghost" href="#">View build</Link>
+            </div>
+          </article>
+          <article className="prebuilt-card">
+            <header>
+              <p className="badge badge-warning">New</p>
+              <h3>Pocket Forge</h3>
+              <p className="tagline">ITX performance in 12L</p>
+            </header>
+            <ul>
+              <li>Ryzen 7 7700 • RTX 4070 Super</li>
+              <li>32 GB DDR5 • 1 TB NVMe</li>
+              <li>Travel-ready crush case</li>
+            </ul>
+            <div className="card-footer">
+              <p className="price">From $1,899</p>
+              <Link className="btn btn-ghost" href="#">View build</Link>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section className="container components-section" id="components">
+        <div className="section-heading">
+          <p className="eyebrow">Curated component shop</p>
+          <h2>Only the parts we trust in our own rigs</h2>
+        </div>
+        <div className="component-grid">
+          <article>
+            <h3>Processors & Cooling</h3>
+            <p>Unlocked CPUs, AIOs, and custom loop hardware with thermal reports.</p>
+            <Link href="/components/cpu" className="text-link">Explore CPUs</Link>
+          </article>
+          <article>
+            <h3>Graphics</h3>
+            <p>Latest NVIDIA and AMD cards with tested FPS metrics.</p>
+            <Link href="/components/gpu" className="text-link">Find a GPU</Link>
+          </article>
+          <article>
+            <h3>Storage</h3>
+            <p>Blazing NVMe drives, RAID-ready SSDs, and curated NAS options.</p>
+            <Link href="/components/storage" className="text-link">Upgrade storage</Link>
+          </article>
+          <article>
+            <h3>Peripherals</h3>
+            <p>Monitors, keyboards, and audio tuned for creation and play.</p>
+            <Link href="/components" className="text-link">View accessories</Link>
+          </article>
+        </div>
+      </section>
+
+      <section className="container builder-steps" id="builder">
+        <div className="section-heading">
+          <p className="eyebrow">How it works</p>
+          <h2>From idea to powered-on in four steps</h2>
+        </div>
+        <ol className="steps">
+          <li>
+            <h3>Tell us your goals</h3>
+            <p>Gaming, creative work, AI workflows—set your targets and budget.</p>
+          </li>
+          <li>
+            <h3>Pick curated parts</h3>
+            <p>We suggest compatible components or pre-tuned templates.</p>
+          </li>
+          <li>
+            <h3>We build & stress test</h3>
+            <p>Every rig runs 24h thermal, memory, and graphics diagnostics.</p>
+          </li>
+          <li>
+            <h3>Enjoy white-glove handoff</h3>
+            <p>Get cable maps, BIOS profiles, and lifetime support.</p>
+          </li>
+        </ol>
+      </section>
+
+      <section className="container reviews-section" id="reviews">
+        <div className="section-heading">
+          <p className="eyebrow">Voices from the community</p>
+          <h2>Real builders. Real wins.</h2>
+        </div>
+        <div className="reviews-grid">
+          <article>
+            <p className="quote">
+              &ldquo;My Nebula Pro hits 360 FPS in Valorant while streaming. Temps stay under 60°C.&rdquo;
+            </p>
+            <p className="reviewer">Alex • Esports coach</p>
+          </article>
+          <article>
+            <p className="quote">
+              &ldquo;Their team dialed in a render workstation that chews through octane scenes.&rdquo;
+            </p>
+            <p className="reviewer">Marina • 3D artist</p>
+          </article>
+          <article>
+            <p className="quote">
+              &ldquo;The build guide and cable labels made future upgrades painless.&rdquo;
+            </p>
+            <p className="reviewer">Devon • Indie dev</p>
+          </article>
+        </div>
+      </section>
+
+      <section className="container cta-section" id="signup">
+        <div className="cta-card">
+          <div>
+            <p className="eyebrow">Need a co-builder?</p>
+            <h2>Let&rsquo;s architect your next PC together.</h2>
+            <p>Book a free 15-minute consult with our build engineers.</p>
+          </div>
+          <a className="btn btn-primary" href="mailto:hello@buildmypc.com">Book a call</a>
+        </div>
+      </section>
+    </>
   );
 }
